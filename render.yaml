@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sintegra-story-engine
+    runtime: python
+    buildCommand: echo "no build needed"
+    startCommand: python3 story-server.py
+    envVars:
+      - key: NVIDIA_API_KEY
+        sync: false
