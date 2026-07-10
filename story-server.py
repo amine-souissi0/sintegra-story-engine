@@ -8,7 +8,7 @@ from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, quote
 import json, os, urllib.request
 
-NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "")
+NVIDIA_API_KEY = os.environ.get("NVIDIA_API_KEY", "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")
 PORT = int(os.environ.get("PORT", 5680))
 
 SYSTEM_PROMPT = (
@@ -173,8 +173,8 @@ button:disabled { background: #3a3a5a; color: #666; cursor: default; }
     <textarea id="desc" placeholder="Ex: Sintegra Pay est une solution de paiement mobile pensee pour les entrepreneurs africains de la diaspora qui veulent envoyer de l'argent et payer leurs fournisseurs en Afrique sans frais bancaires excessifs..."></textarea>
   </div>
   <div class="key-row">
-    <input type="text" id="apikey" placeholder="Cle NVIDIA NIM  (nvapi-...)" />
-    <button id="btn" onclick="generate()">Generer l'identite &#10022;</button>
+    <input type="hidden" id="apikey" value="" />
+    <button id="btn" onclick="generate()" style="width:100%">Generer l'identite &#10022;</button>
   </div>
   <div class="error" id="error"></div>
   <div class="loader" id="loader"><div class="spinner"></div><p>Generation en cours...</p></div>
